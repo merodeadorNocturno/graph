@@ -133,7 +133,30 @@ fn main() {
   g.push_edge("W", "X", "W -> X".to_string());
   g.push_edge("D", "Y", "D -> Y".to_string());
   g.push_edge("P", "Z", "P -> Z".to_string());
-  
+  g.push_edge("B", "G", "B -> G".to_string());
+  g.push_edge("B", "A", "B -> A".to_string());
+  g.push_edge("B", "B", "B loop".to_string());
+  g.push_edge("B", "Y", "B -> Y".to_string());
+  g.push_edge("Z", "Z", "Z loop".to_string());
+  g.push_edge("Z", "O", "Z -> O".to_string());
+  g.push_edge("Z", "M", "Z -> M".to_string());
+  g.push_edge("Z", "B", "Z -> B".to_string());
+  g.push_edge("Z", "I", "Z -> I".to_string());
+  g.push_edge("Z", "E", "Z -> E".to_string());
+  g.push_edge("T", "T", "T loop".to_string());
+  g.push_edge("T", "O", "T -> O".to_string());
+  g.push_edge("T", "N", "T -> N".to_string());
+  g.push_edge("T", "A", "T -> A".to_string());
+  g.push_edge("Q", "W", "Q -> W".to_string());
+  g.push_edge("Q", "E", "Q -> E".to_string());
+  g.push_edge("Q", "R", "Q -> R".to_string());
+  g.push_edge("Q", "T", "Q -> T".to_string());
+  g.push_edge("Q", "Y", "Q -> Y".to_string());
+  g.push_edge("R", "M", "R -> M".to_string());
+  g.push_edge("J", "C", "J -> C".to_string());
+  g.push_edge("G", "L", "G -> L".to_string());
+  g.push_edge("C", "A", "C -> A".to_string());
+  g.push_edge("C", "T", "C -> T".to_string());
   
   let mut count = 65u8;
 
@@ -145,7 +168,7 @@ fn main() {
     count += 1;
     println!("{:?}", g.map_adjacent(&my_char, |x| x.clone()));
 
-    if count == 90 {
+    if count == 91 {
       println!("OK, that's enough");
 
       break;
